@@ -1,0 +1,45 @@
+
+/*flex flow is the shorthand for the flex-direction and flex-wrap propertie*/
+
+.wrap{display: flex; flex-flow: row wrap;}
+
+/*
+
+* Selects all elements
+flex: 1 sets flex-grow to 1
+all item are at 100% width 
+*/
+.wrap > * {flex: 1 100%;}
+
+/*media query and parameters adjust position to auto when limit hits*/
+@media all and (min-width: 800px) {
+    .adjust { flex: 1 auto;}
+}
+
+/*set heigth at 96% of screen //'Use some padding to make it smooth'*/
+.Container {height: 96vh; padding: 5px;}
+
+/*Set color of item*/
+.header {background: #00b7eb;}
+.hero {background:#ff0000;}
+.content {background:#00ff00;}
+.sidebar {background:#800080;}
+.footer {background:#444444;}
+
+/**/
+PlaceTextCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Usefull ? useless ? who knows....
+@media all and (min-width: 800px) {
+    .header {flex: 3;}
+    .content {order: 2;}
+    .hero {order: 1;}
+    .sidebar {order: 3;}
+    .footer {order: 4;}
+}
+*/
